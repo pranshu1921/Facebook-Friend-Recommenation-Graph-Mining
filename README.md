@@ -1,8 +1,7 @@
 # Facebook-Friend-Recommenation-Graph-Mining
-This repo contains the Capstone Project - The Battle of the Neighborhoods Applied Data Science Capstone by IBM/Coursera
 
-Introduction: Business Problem This project aims to select the safest borough in London based on the total crimes, explore the neighborhoods of that borough to find the 10 most common venues in each neighborhood and finally cluster the neighborhoods using k-mean clustering.
-
+The project involves using data from the [FacebookRecruiting](https://www.kaggle.com/c/FacebookRecruiting/overview/description) challenge on [Kaggle](https://www.kaggle.com) to predict missing links from a given directed social graph to recommend users.
+This is a supervised machine learning problem.
 
 ## Table of contents
 * [General info](#general-info)
@@ -13,30 +12,38 @@ Introduction: Business Problem This project aims to select the safest borough in
 
 ## General info
 
-This report will be targeted to people who are looking to relocate to London. Inorder to finalise a neighborhood to hunt for an apartment, safety is considered as a top concern when moving to a new place. If you don’t feel safe in your own home, you’re not going to be able to enjoy living there. The crime statistics will provide an insight into this issue.
+Taken data from facebook's recruting challenge on kaggle https://www.kaggle.com/c/FacebookRecruiting
+data contains two columns source and destination eac edge in graph - Data columns (total 2 columns):
+- source_node int64
+- destination_node int64
 
-Preprocessed a real world data set from Kaggle showing the London Crimes from 2008 to 2016
-
-URL: https://www.kaggle.com/jboysen/london-crime
-
-Kindly refer to the pdf report [here](https://github.com/pranshu1921/Coursera_Capstone/blob/master/Capstone%20Project%20-%20Report.pdf) for complete explanation.
+Generated training samples of good and bad links from given directed graph and for each link got some features like no of followers, is he followed back, page rank, katz score, adar index, some svd fetures of adj matrix, some weight features etc. and trained ml model based on these features to predict link.
+Some reference papers and videos :
+https://www.cs.cornell.edu/home/kleinber/link-pred.pdf
+https://www3.nd.edu/~dial/publications/lichtenwalter2010new.pdf
+https://kaggle2.blob.core.windows.net/forum-message-attachments/2594/supervised_link_prediction.pdf
+https://www.youtube.com/watch?v=2M77Hgy17cg
 
 ## Setup
 
-* Download the Jupyter Notebook above on your computer.
+* Download all the Jupyter Notebooks at the same location on your computer.
+* Download dataset(train and test data) and other data [here](https://drive.google.com/drive/folders/1pEBmIl1tbuwYrsfeUv2KDz8a2gR0Fjxe?usp=sharing).
 
 ### Install the requirements
  
 * Install the requirements using `pip install -r requirements.txt`.
     * Make sure you use Python 3.
     
-* Run the jupyter notebook
+* Run the jupyter notebooks in the following order -
+ - FB_EDA.ipynb
+ - FB_featurization.ipynb
+ - FB_Models.ipynb
+ 
 
 ## Status
-Project is: Finished
+Project status: **Finished**
 
 ## Inspiration
-This project was part of the learning process for the IBM Applied Data Science Professional Certificate on [Coursera.com](https://www.coursera.com/)
-
+This topic was a great opportunity to explore Facebook recruiting requirements and exploration of graph mining till its application.
 ## Contact
 Feel free to contact me, send a mail to **pranshu1921@gmail.com**
