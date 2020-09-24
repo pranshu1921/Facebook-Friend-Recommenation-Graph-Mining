@@ -35,9 +35,9 @@ https://www.youtube.com/watch?v=2M77Hgy17cg
     * Make sure you use Python 3.
     
 * Run the jupyter notebooks in the following order -
- - FB_EDA.ipynb
- - FB_featurization.ipynb
- - FB_Models.ipynb
+ 1. FB_EDA.ipynb
+ 2. FB_featurization.ipynb
+ 3. FB_Models.ipynb
  
 
 ## Status
