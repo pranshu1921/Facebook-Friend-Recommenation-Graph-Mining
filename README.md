@@ -3,13 +3,6 @@
 The project involves using data from the [FacebookRecruiting](https://www.kaggle.com/c/FacebookRecruiting/overview/description) challenge on [Kaggle](https://www.kaggle.com) to predict missing links from a given directed social graph to recommend users.
 This is a supervised machine learning problem.
 
-## Table of contents
-* [General info](#general-info)
-* [Setup](#setup)
-* [Status](#status)
-* [Inspiration](#inspiration)
-* [Contact](#contact)
-
 ## General info
 
 Taken data from facebook's recruting challenge on kaggle https://www.kaggle.com/c/FacebookRecruiting
@@ -23,6 +16,22 @@ https://www.cs.cornell.edu/home/kleinber/link-pred.pdf
 https://www3.nd.edu/~dial/publications/lichtenwalter2010new.pdf
 https://kaggle2.blob.core.windows.net/forum-message-attachments/2594/supervised_link_prediction.pdf
 https://www.youtube.com/watch?v=2M77Hgy17cg
+
+### Mapping the problem into supervised learning problem:
+- Generated training samples of good and bad links from given directed graph and for each link got some features like no of followers, is he followed back, page rank, katz score, adar index, some svd fetures of adj matrix, some weight features etc. and trained ml model based on these features to predict link. 
+- Some reference papers and videos :  
+    - https://www.cs.cornell.edu/home/kleinber/link-pred.pdf
+    - https://www3.nd.edu/~dial/publications/lichtenwalter2010new.pdf
+    - https://kaggle2.blob.core.windows.net/forum-message-attachments/2594/supervised_link_prediction.pdf
+    - https://www.youtube.com/watch?v=2M77Hgy17cg
+    
+### Performance metric for supervised learning:  
+- Both precision and recall is important so F1 score is good choice
+- Confusion matrix
+
+### Conclusion:  
+- For RF F1 score is 0.9241678239279553 
+- For GBDT F1 score is 0.9327770050996755
 
 ## Setup
 
